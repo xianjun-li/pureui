@@ -1,0 +1,48 @@
+.nestnav, .nestnav ul, .nestnav li,a{ margin:0; padding:0; list-style:none;}
+.nestnav ul{display:none; position:absolute;}
+.nestnav li{
+    position:relative;
+    white-space:nowrap;
+    /* *white-space:pre; */
+    *word-wrap:break-word;
+}
+
+.nestnav li:hover>ul{display:block;}
+
+/*>2 level*/
+.nestnav ul{
+    left:100%;
+    top:0;
+}
+
+/* 横向导航处理 ＊／
+/* 1st */
+.nestnav.transverse>li{
+    float:left;
+}
+
+.nestnav.transverse>li>ul{
+    left:0;
+    top:100%;
+}
+
+/* ie
+**************************************/
+* html .nestnav  li{
+    /*
+    display:inline;
+    zoom:1;
+    */
+}
+
+* html .nestnav a{
+    /* ie6 {{{*/
+    /*display:inline;*/
+    zoom:1;
+    /*width:auto;*/
+    white-space:nowrap;
+    float:left; white-space:nowrap;
+    /* ie6 }}}*/
+        
+    background-image:url(about:blank); /*ie7*/
+}
